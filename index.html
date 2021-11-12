@@ -3,31 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>QMUL-OpenLogo</title>
-      <meta name="description" content="Existing logo detection benchmarks consider 
-            artificial deployment scenarios by assuming
-            that large training data with fine-grained bounding box annotations 
-            for each class are available for model training.
-            Such assumptions are often invalid in realistic logo detection scenarios where 
-            new logo classes come progressively and require to be detected
-            with little or none budget for exhaustively labelling fine-grained training data 
-            for every new class.
-            Existing benchmarks are thus
-            unable to evaluate the true performance of a logo detection method 
-            in realistic and open deployments.
-            In this work, we introduce a more realistic
-            and challenging logo detection setting, called <b>Open Logo Detection</b>. 
-            Specifically,
-            this new setting assumes fine-grained labelling only on 
-            a small proportion of logo classes whilst the remaining classes
-            have no labelled training data to simulate the
-            open deployment.
-            Further, 
-            we create an open logo detection benchmark, called <b>QMUL-OpenLogo</b>,
-            to promote the investigation of this new challenge.
-            QMUL-OpenLogo contains 27,083 images from 352 logo classes,
-            built by aggregating and refining 7 existing datasets
-            and establishing an open logo detection evaluation protocol.">
+      <title>SMVL</title>
+      <meta name="description" content="To research and tackle many unique issues in logo detection from live streaming sport events such as multiple 
+					instances of the same object, data redundancy, objects appear on the edges of the image and far away from the camera, 
+					we contribute a large scale sports video logo detection database called Sports Match Video Logo Dataset (SMVL).
+					Popular basketball and soccer match videos are selected as the data source for this dataset, due to their rich data and frequent 
+					logo instances occurrence. The dataset contains videos from 40 live matches, 20 basketball and 20 soccer games. From each match, 
+					video clips of around 5 to 10 seconds are extracted from various camera angles. 
+					Frame images are extracted from the clips at a rate of 24 frames per second. The dataset contains 199 video clips with around 120 
+					images per clip, resulting in 24,348 frame images and 223 logo classes in total. 
+					The resolution of the frames is $3840\times2160$ pixels">
       <meta name="keywords" content="QMUL; 
          QMUL OpenLogo Dataset; OpenLogo;
          logo recognition; logo detection; 
