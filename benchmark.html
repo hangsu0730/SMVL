@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0055)https://qmul-survface.github.io/QMUL-SurvFace/index.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>QMUL-OpenLogo</title>
+      <meta name="description" content="Existing logo detection benchmarks consider 
+            artificial deployment scenarios by assuming
+            that large training data with fine-grained bounding box annotations 
+            for each class are available for model training.
+            Such assumptions are often invalid in realistic logo detection scenarios where 
+            new logo classes come progressively and require to be detected
+            with little or none budget for exhaustively labelling fine-grained training data 
+            for every new class.
+            Existing benchmarks are thus
+            unable to evaluate the true performance of a logo detection method 
+            in realistic and open deployments.
+            In this work, we introduce a more realistic
+            and challenging logo detection setting, called <b>Open Logo Detection</b>. 
+            Specifically,
+            this new setting assumes fine-grained labelling only on 
+            a small proportion of logo classes whilst the remaining classes
+            have no labelled training data to simulate the
+            open deployment.
+            Further, 
+            we create an open logo detection benchmark, called <b>QMUL-OpenLogo</b>,
+            to promote the investigation of this new challenge.
+            QMUL-OpenLogo contains 27,083 images from 352 logo classes,
+            built by aggregating and refining 7 existing datasets
+            and establishing an open logo detection evaluation protocol.">
+      <meta name="keywords" content="QMUL; 
+         QMUL OpenLogo Dataset; OpenLogo;
+         logo recognition; logo detection; 
+         benchmark; computer vision;">
+      <!-- Fonts and stuff -->
+      <link href="./CSS/project.css" rel="stylesheet">
+      <link href="./CSS/iconize.css" rel="stylesheet">
+      <link href="./css/" rel="shortcut icon">
+      <script type="text/javascript" async="" src="./CSS/ga.js"></script>
+      <link href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+      <link href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+      <link href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+      <link href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+   </head>
+   <body>
+      <div id="content">
+      <div id="content-inner">
+         <div class="section head">
+            <p>
+            <h1 id="OpenLogo Dataset">QMUL-OpenLogo: Open Logo Detection Challenge</h1>
+            </p>
+            <div class="affiliations">
+               <p><a href="http://www.eecs.qmul.ac.uk/~hs308/">Hang Su</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                  <a href="http://www.eecs.qmul.ac.uk/~xiatian/">Xiatian Zhu</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                  <a href="http://www.eecs.qmul.ac.uk/~sgg/">Shaogang Gong</a>
+               <p><a href="http://vision.eecs.qmul.ac.uk/">Computer Vision Group,  </a >
+                  <a href="http://www.eecs.qmul.ac.uk/">School of Electronic Engineering and Computer Science,  </a >
+                  <a href="http://www.qmul.ac.uk/">Queen Mary University of London</a >
+            </div>
+            <ul id="tabs">
+               <li><a href="https://qmul-openlogo.github.io/index.html" name="#tab3">Home</a></li>
+               <!-- <li><a href="https://qmul-survface.github.io/protocols.html" name="#tab2">Protocols</a></li>-->
+               <li><a href="https://qmul-openlogo.github.io/benchmark.html" name="#tab3" id="current">Leaderboard</a></li>
+            </ul>
+         </div>
+         <h2 id="description">Open-set 1 logo detection results</h2>
+         <p>
+         <div class="tab">
+            <table align="center" width="80%" style="margin: 0px auto;" class="justify" cellpadding="0" cellspacing="0">
+               <thead align="center">
+                  <tr>
+                     <th>Method</th>
+                     <th>All Class</th>
+		     <th>Unsupervised Class</th>
+                     <th>Supervised Class</th>
+                  </tr>
+                  <tr>
+                     <td>YOLO9000 [1]</td>
+                     <td>4.19</td>
+                     <td>1.98</td>
+                     <td>26.33</td>
+                  </tr>
+                  <tr>
+                     <td>YOLOv2 [1]+SCL [2]</td>
+                     <td>12.10</td>
+                     <td>8.75</td>
+                     <td>45.48</td>
+                  </tr>
+                  <tr>
+                     <th>YOLOv2 [1]+CAL [4]</th>
+                     <th>13.14</th>
+                     <th>9.55</th>
+                     <td>49.17</td>
+                  </tr>
+                  <tr>
+                     <td>FR-CNN [3]+SCL [2]</td>
+                     <td>12.35</td>
+                     <td>8.51</td>
+                     <td>50.74</td>
+                  </tr>
+                  <tr>
+                     <th>FR-CNN [3]+CAL [4]</th>
+                     <td>13.13</td>
+                     <td>9.34</td>
+                     <th>51.03</th>
+                  </tr>
+	       </thead>
+            </table>
+            </p>
+	      
+         <h2 id="description">Open-set 2 logo detection results</h2>
+         <p>
+         <div class="tab">
+            <table align="center" width="80%" style="margin: 0px auto;" class="justify" cellpadding="0" cellspacing="0">
+               <thead align="center">
+                  <tr>
+                     <th>Method</th>
+                     <th>All Class</th>
+		     <th>Unsupervised Class</th>
+                     <th>Supervised Class</th>
+                  </tr>
+                  <tr>
+                     <td>YOLOv2 [1]+SCL [2]</td>
+                     <td>30.06</td>
+                     <td>12.75</td>
+		     <td>47.36</td>
+                  </tr>
+                  <tr>
+                     <td>YOLOv2 [1]+CAL [4]</td>
+                     <td>30.16</td>
+		     <td>13.72</td>
+                     <td>46.60</td>                     
+                  </tr>
+                  <tr>
+                     <th>FR-CNN [3]+SCL [2]</th>
+                     <td>33.89</td>                     
+                     <td>18.63</td>
+		     <th>49.16</th>
+                  </tr>
+                  <tr>
+                     <th>FR-CNN [3]+CAL [4]</th>
+                     <th>34.25</th>                     
+                     <th>20.31</th>
+		     <td>48.19</td>
+                  </tr>
+	       </thead>
+            </table>
+            </p>
+	      
+	      
+	      
+         <h2 id="description">Closed-set logo detection results</h2>
+         <p>
+         <div class="tab">
+            <table align="center" width="80%" style="margin: 0px auto;" class="justify" cellpadding="0" cellspacing="0">
+               <thead align="center">
+                  <tr>
+		     <th>Method</th>
+                     <th>mAP</th>
+                  </tr>
+               </thead>
+               <thead align="center">
+                  <tr>
+		     <th>FR-CNN [3]</th>
+                     <th>48.3</th>
+                  </tr>
+               </thead>
+            </table>
+         </div>
+	      
+         <h2 id="description">Model Download</h2>
+	      <p><a href="https://drive.google.com/open?id=1DKc9pD2lVGoc6Ezxy00Ni3SKP-g26fC2">YOLOv2 [1]+SCL [2]</a></p>
+	      <p><a href="https://drive.google.com/open?id=17oPmnDPKzwqKsSjHgTwr-V831EylcDg1">FR-CNN [3]+SCL [2]</a></p>
+	      <p><a href="https://drive.google.com/open?id=1e16OULC8umORXNWP5frtRysQwV6pP-SO">YOLOv2 [1]+CAL [4]</a></p>
+	      <p><a href="https://drive.google.com/open?id=1WHX4_Z4e5NQQ-nWFuM7dzB6qrPFXXfmZ">FR-CNN [3]+CAL [4]</a></p>
+	      <p><a href="https://drive.google.com/open?id=1I2wgUsRSqVa0kpkwTugNnO55-sZnAc-1">YOLOv2 config file</a></p>
+	      <p><a href="https://drive.google.com/open?id=1PI1YVj03rlepgw0Xz5CeKMwcut-e7H7r">FR-CNN train prototxt file</a></p>
+	      <p><a href="https://drive.google.com/open?id=12Y7B_D3669RVLa7j0KEll8OiG6faG_GU">FR-CNN test prototxt file</a></p>
+
+	      
+                  <br> 
+                  <p> [1]. Jpseph Redmon and Ali Farhadi. Yolo9000: better, faster, stronger. CVPR 2017.</p>
+                  <p> [2]. Hang Su, Xiatian Zhu and Shaogang Gong. Deep learning logo detection with data expansion by synthesising context. WACV 2017. </p>
+	          <p> [3]. Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun. Faster r-cnn: Towards real time object detection with region proposal networks. NIPS 2015. </p>
+	          <p> [4]. Hang Su, Xiatian Zhu and Shaogang Gong. Open Logo Detection Challenge. BMVC 2018. </p>
+		  <br>
+      </div>
+   </body>
+</html>
