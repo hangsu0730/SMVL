@@ -1,1 +1,1 @@
-# QMUL-OpenLogo: Open Logo Detection Challenge
+# SMVL: Sports Match Video Logo dataset
