@@ -50,12 +50,10 @@
             <h1 id="OpenLogo Dataset">QMUL-OpenLogo: Open Logo Detection Challenge</h1>
             </p>
             <div class="affiliations">
-               <p><a href="http://www.eecs.qmul.ac.uk/~hs308/">Hang Su</a> &nbsp; &nbsp; &nbsp; &nbsp;
-                  <a href="http://www.eecs.qmul.ac.uk/~xiatian/">Xiatian Zhu</a> &nbsp; &nbsp; &nbsp; &nbsp;
-                  <a href="http://www.eecs.qmul.ac.uk/~sgg/">Shaogang Gong</a>
-               <p><a href="http://vision.eecs.qmul.ac.uk/">Computer Vision Group,  </a >
-                  <a href="http://www.eecs.qmul.ac.uk/">School of Electronic Engineering and Computer Science,  </a >
-                  <a href="http://www.qmul.ac.uk/">Queen Mary University of London</a >
+               <p><a href="https://scholar.google.com/citations?hl=en&user=_7VkHvMAAAAJ/">Hang Su</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                  <a href="https://scholar.google.com/citations?user=pHkKtyMAAAAJ/">Qiu Guoping</a>
+               <p><a href="http://ceie.szu.edu.cn/">College of Electronics and Information Enginieering,  </a >
+                  <a href="https://www.szu.edu.cn/">Shenzhen University</a >
             </div>
             <ul id="tabs">
                <li><a href="https://hangsu0730.github.io/SMVL/index.html" name="#tab3">Home</a></li>
@@ -63,93 +61,16 @@
                <li><a href="https://hangsu0730.github.io/SMVL/benchmark.html" name="#tab3" id="current">Leaderboard</a></li>
             </ul>
          </div>
-         <h2 id="description">Open-set 1 logo detection results</h2>
+         <h2 id="description">SMVL active learning results. Detection model based on FR-CNN [3] and Res101 [4] architecture. 
+	      Comparison baselines includes random selection, entropy ranking, DeepAL [1] and MOAID [2]. 
+		 The active learning labelling batch size range from 20 to 100. </h2>
          <p>
-         <div class="tab">
-            <table align="center" width="80%" style="margin: 0px auto;" class="justify" cellpadding="0" cellspacing="0">
-               <thead align="center">
-                  <tr>
-                     <th>Method</th>
-                     <th>All Class</th>
-		     <th>Unsupervised Class</th>
-                     <th>Supervised Class</th>
-                  </tr>
-                  <tr>
-                     <td>YOLO9000 [1]</td>
-                     <td>4.19</td>
-                     <td>1.98</td>
-                     <td>26.33</td>
-                  </tr>
-                  <tr>
-                     <td>YOLOv2 [1]+SCL [2]</td>
-                     <td>12.10</td>
-                     <td>8.75</td>
-                     <td>45.48</td>
-                  </tr>
-                  <tr>
-                     <th>YOLOv2 [1]+CAL [4]</th>
-                     <th>13.14</th>
-                     <th>9.55</th>
-                     <td>49.17</td>
-                  </tr>
-                  <tr>
-                     <td>FR-CNN [3]+SCL [2]</td>
-                     <td>12.35</td>
-                     <td>8.51</td>
-                     <td>50.74</td>
-                  </tr>
-                  <tr>
-                     <th>FR-CNN [3]+CAL [4]</th>
-                     <td>13.13</td>
-                     <td>9.34</td>
-                     <th>51.03</th>
-                  </tr>
-	       </thead>
-            </table>
-            </p>
-	      
-         <h2 id="description">Open-set 2 logo detection results</h2>
-         <p>
-         <div class="tab">
-            <table align="center" width="80%" style="margin: 0px auto;" class="justify" cellpadding="0" cellspacing="0">
-               <thead align="center">
-                  <tr>
-                     <th>Method</th>
-                     <th>All Class</th>
-		     <th>Unsupervised Class</th>
-                     <th>Supervised Class</th>
-                  </tr>
-                  <tr>
-                     <td>YOLOv2 [1]+SCL [2]</td>
-                     <td>30.06</td>
-                     <td>12.75</td>
-		     <td>47.36</td>
-                  </tr>
-                  <tr>
-                     <td>YOLOv2 [1]+CAL [4]</td>
-                     <td>30.16</td>
-		     <td>13.72</td>
-                     <td>46.60</td>                     
-                  </tr>
-                  <tr>
-                     <th>FR-CNN [3]+SCL [2]</th>
-                     <td>33.89</td>                     
-                     <td>18.63</td>
-		     <th>49.16</th>
-                  </tr>
-                  <tr>
-                     <th>FR-CNN [3]+CAL [4]</th>
-                     <th>34.25</th>                     
-                     <th>20.31</th>
-		     <td>48.19</td>
-                  </tr>
-	       </thead>
-            </table>
-            </p>
+         <center><img style="width: 95%;" src="./CSS/datasetexamples.jpg" alt="SMVL results"></center>
+         </p>
 	      
 	      
 	      
-         <h2 id="description">Closed-set logo detection results</h2>
+         <h2 id="description">Fully supervised training results</h2>
          <p>
          <div class="tab">
             <table align="center" width="80%" style="margin: 0px auto;" class="justify" cellpadding="0" cellspacing="0">
@@ -161,8 +82,8 @@
                </thead>
                <thead align="center">
                   <tr>
-		     <th>FR-CNN [3]</th>
-                     <th>48.3</th>
+		     <th>FR-CNN [3] + Res101 </th>
+                     <th>92.10</th>
                   </tr>
                </thead>
             </table>
@@ -179,10 +100,11 @@
 
 	      
                   <br> 
-                  <p> [1]. Jpseph Redmon and Ali Farhadi. Yolo9000: better, faster, stronger. CVPR 2017.</p>
-                  <p> [2]. Hang Su, Xiatian Zhu and Shaogang Gong. Deep learning logo detection with data expansion by synthesising context. WACV 2017. </p>
-	          <p> [3]. Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun. Faster r-cnn: Towards real time object detection with region proposal networks. NIPS 2015. </p>
-	          <p> [4]. Hang Su, Xiatian Zhu and Shaogang Gong. Open Logo Detection Challenge. BMVC 2018. </p>
+                  <p> [1]. Hamed H Aghdam, Abel Gonzalez-Garcia, Joost van de Weijer and Antonio M Lopez. Active learning for deep detectin neural networks. ICCV 2019. </p>
+	          <p> [2]. Tianning Yuan, Fang Wan, Mengying Fu, Jianzhuang Liu, Songcen Xu, Xiangyang Ji and Qixiang Ye. Multiple instance active learning for object detection. CVPR 2021. </p>
+	       	  <p> [3]. Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun. Faster r-cnn: Towards real time object detection with region proposal networks. NIPS 2015. </p>   
+	          <p> [4]. Kaiming He, Xiangyu Zhang, Shaoqing Ren and Jian Sun. Deep residual learning for image recognition. CVPR 2016. </p>
+	          <p> [5]. Hang Su, Qiu Guoping. A Deep Transfer Active Learning Approach to Sports Logo Detection in Video. In Proc. </p>
 		  <br>
       </div>
    </body>
