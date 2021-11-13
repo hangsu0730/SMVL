@@ -46,65 +46,47 @@
          <center><img style="width: 95%;" src="./CSS/img_combined3.jpg" alt="QMUL OpenLogo"></center>
          <h2 id="description">Description</h2>
          <p>
-            Existing logo detection benchmarks consider 
-            artificial deployment scenarios by assuming
-            that large training data with fine-grained bounding box annotations 
-            for each class are available for model training.
-            Such assumptions are often invalid in realistic logo detection scenarios where 
-            new logo classes come progressively and require to be detected
-            with little or none budget for exhaustively labelling fine-grained training data 
-            for every new class.
-            Existing benchmarks are thus
-            unable to evaluate the true performance of a logo detection method 
-            in realistic and open deployments.
-            In this work, we introduce a more realistic
-            and challenging logo detection setting, called <b>Open Logo Detection</b>. 
-            Specifically,
-            this new setting assumes fine-grained labelling only on 
-            a small proportion of logo classes whilst the remaining classes
-            have no labelled training data to simulate the
-            open deployment.
-            Further, 
-            we create an open logo detection benchmark, called <b>QMUL-OpenLogo</b>,
-            to promote the investigation of this new challenge.
-            QMUL-OpenLogo contains 27,083 images from 352 logo classes,
-            built by aggregating and refining 7 existing datasets
-            and establishing an open logo detection evaluation protocol.
+            To research and tackle many unique issues in logo detection from live streaming sport events such as multiple 
+					instances of the same object, data redundancy, objects appear on the edges of the image and far away from the camera, 
+					we contribute a large scale sports video logo detection database called Sports Match Video Logo Dataset (SMVL).
+					Popular basketball and soccer match videos are selected as the data source for this dataset, due to their rich data and frequent 
+					logo instances occurrence. The dataset contains videos from 40 live matches, 20 basketball and 20 soccer games. From each match, 
+					video clips of around 5 to 10 seconds are extracted from various camera angles. 
+					Frame images are extracted from the clips at a rate of 24 frames per second. 
          </p>
          <h2 id="description">Statistics</h2>
 	      <p>
-          For dataset training-evaluation split, we propose 3 kind of setting. The first one is the fully supervised setting,
-		      with every logo classes contains 70% of training split and 30% of evaluation split. The second setting 
-		      split the dataset into 32 supervised classes and 320 unsupervised classes, where the supervised contains
-		      real training split and evaluation split, while the unsupervised classes have no training split, only 
-		      evaluation split. For the 3rd setting, we split the dataset into 176 supervised classes and 176 unsupervised classes.</p>
-	      
-		<p>
-		      Notification for Supervised/Unsupervised splitting: The dataset contains images of multi-instances 
-		      and multi-classes, thus some supervised set images may contain both supervised and unsupervised instances in it,
-		      it is recommendded to filter it for own useage.
-         </p>
+		      The dataset contains 199 video clips with around 120 
+					images per clip, resulting in 24,348 frame images and 223 logo classes in total. 
+					The resolution of the frames is $3840\times2160$ pixels.
+          For dataset training-evaluation split, 11,979 training split and 12,369 evaluation split are randomly sampled.
+	      Another notable feature of this dataset is that each image contains mulitple logo instances and average area 
+		      of logo instances relative to the whole image is very small, compared with existing popular logo datasets such as
+		      FlickrLogos-32, Openlogo and WebLogo-2M.</p>
+
 	 <!-- <h2 id="description"></h2> -->
-	 <p>Closed-set logo detection setting: all logo classes have training images.</p>
+	 <p>Dataset Statitics.</p>
          <p>
          <div class="tab">
             <table align="center" width="80%" style="margin: 0px auto;" class="justify" cellpadding="0" cellspacing="0">
                <thead align="center">
                   <tr>
                      <th>Classes</th>
-                     <th>Train Images</th>
-		     <th>Val Images</th>
-                     <th>Test Images</th>
+                     <th>Training Split</th>
+		     <th>Evaluation Split</th>
                      <th>Total Images</th>
+                     <th>Average logos per Image</th>
+		     <th>Average logo size</th>
                   </tr>
                </thead>
                <tbody align="center">
                   <tr>
                      <td>352</td>
-                     <td>15,975(59.0%)</td>
-                     <td>2,777(10.3%)</td>
-                     <td>8,331(30.7%)</td>
-                     <td>27,083</td>
+                     <td>11,979(49.2%)</td>
+                     <td>12,369(50.8%)</td>
+                     <td>24,348</td>
+                     <td>15.06</td>
+		     <td>0.0036%</td>
                   </tr>
             </table>
             </p>
